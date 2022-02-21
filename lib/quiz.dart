@@ -14,6 +14,8 @@ class Quiz extends StatelessWidget {
     @required this.questionIndex,
   });
 
+  //定義
+
   @override
   Widget build(BuildContext context) {
     return Column(
