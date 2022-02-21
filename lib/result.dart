@@ -36,7 +36,7 @@ class Result extends StatelessWidget {
               style: TextStyle(color: Colors.blue),
             ),
             // textColor: Colors.blue,
-            onPressed: resetHandler,
+            onPressed: resetHandler(),
           ),
         ],
       ),
