@@ -74,18 +74,18 @@ class _QuizPageState extends State<QuizPage> {
       appBar: AppBar(
         title: Text('Sleep score'),
       ),
-      body: WidgetsBinding.instance!.addPostFrameCallback((_) {
-        _questionIndex < _questions.length ? Quiz(answerQuestion: _answerQuestion, questionIndex: _questionIndex, questions: _questions,) : Result(_totalScore, _resetQuiz);
-      }
-      ),
+      body: _questionIndex < _questions.length
+          ? Quiz(
+        answerQuestion: _answerQuestion,
+        questionIndex: _questionIndex,
+        questions: _questions,
+      )
+          : Result(_totalScore, _resetQuiz),
     );
   }
 }
 
-// body: _questionIndex < _questions.length
-// ? Quiz(
-// answerQuestion: _answerQuestion,
-// questionIndex: _questionIndex,
-// questions: _questions,
-// )
-// : Result(_totalScore, _resetQuiz),
+// body: WidgetsBinding.instance!.addPostFrameCallback((_) {
+// _questionIndex < _questions.length ? Quiz(answerQuestion: _answerQuestion, questionIndex: _questionIndex, questions: _questions,) : Result(_totalScore, _resetQuiz);
+// }
+// ),
