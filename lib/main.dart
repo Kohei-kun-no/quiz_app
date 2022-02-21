@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 
 import './quiz.dart';
 import './result.dart';
-// void main() {
-//   runApp(MyApp());
-// }
 
 void main() => runApp(MyApp());
 
@@ -19,30 +16,30 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   final _questions = const [
     {
-      'questionText': 'What\'s your favorite color?',
+      'questionText': 'Do you wake up at the same time every day?',
       'answers': [
-        {'text': 'Black', 'score': 10},
-        {'text': 'Red', 'score': 5},
-        {'text': 'Green', 'score': 3},
-        {'text': 'White', 'score': 1},
+        {'text': 'Yes, every day', 'score': 10},
+        {'text': 'Yes, almost every day', 'score': 7},
+        {'text': 'Yes, but sometimes I cannot', 'score': 4},
+        {'text': 'No, I wake up randomly', 'score': 1},
       ],
     },
     {
-      'questionText': 'What\'s your favorite animal?',
+      'questionText': 'What\'s your feeling when you waked up today?',
       'answers': [
-        {'text': 'Rabbit', 'score': 3},
-        {'text': 'Snake', 'score': 11},
-        {'text': 'Elephant', 'score': 5},
-        {'text': 'Lion', 'score': 9},
+        {'text': 'Great', 'score': 10},
+        {'text': 'Not But', 'score': 7},
+        {'text': 'Normal', 'score': 4},
+        {'text': 'Angry', 'score': 1},
       ],
     },
     {
-      'questionText': 'Who\'s your favorite instructor?',
+      'questionText': 'Do you feel sleepy at day time?',
       'answers': [
-        {'text': 'Max', 'score': 1},
-        {'text': 'Max', 'score': 1},
-        {'text': 'Max', 'score': 1},
-        {'text': 'Max', 'score': 1},
+        {'text': 'No', 'score': 10},
+        {'text': 'Sometimes', 'score': 7},
+        {'text': 'Often', 'score': 4},
+        {'text': 'Always', 'score': 1},
       ],
     },
   ];
@@ -84,7 +81,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('My First App'),
+          title: Text('Sleep score'),
         ),
         body: _questionIndex < _questions.length
             ? Quiz(
